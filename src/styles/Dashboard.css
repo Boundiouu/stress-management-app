@@ -1,0 +1,78 @@
+.dashboard{
+
+    width:80%;
+
+    margin:auto;
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+.dashboard h1{
+
+    color:#2E7D32;
+
+}
+
+.dashboard h2{
+
+    margin-bottom:40px;
+
+}
+.stress-form{
+
+    width:400px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.stress-form label{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.stress-form select{
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    margin-bottom:20px;
+
+}
+
+.stress-form button{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#4CAF50;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.stress-form button:hover{
+
+    background:#2E7D32;
+
+}

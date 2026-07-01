@@ -1,0 +1,57 @@
+.history-container{
+
+    width:80%;
+
+    margin:auto;
+
+    margin-top:50px;
+
+}
+
+.history-container h1{
+
+    text-align:center;
+
+    color:#2E7D32;
+
+    margin-bottom:30px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+}
+
+th{
+
+    background:#2E7D32;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+tr:hover{
+
+    background:#E8F5E9;
+
+}

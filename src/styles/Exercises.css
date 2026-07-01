@@ -1,0 +1,47 @@
+.exercise-container{
+
+    width:80%;
+
+    margin:auto;
+
+    margin-top:40px;
+
+}
+
+.exercise-container h1{
+
+    text-align:center;
+
+    color:#2E7D32;
+
+    margin-bottom:40px;
+
+}
+
+.exercise-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+}
+
+.exercise-card h2{
+
+    color:#2E7D32;
+
+    margin-bottom:10px;
+
+}
+
+.exercise-card p{
+
+    font-size:17px;
+
+}
