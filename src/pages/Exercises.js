@@ -1,72 +1,47 @@
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ExerciseCard from "../components/ExerciseCard";
+import api from "../services/api";
 
 import "../styles/Exercises.css";
 
 function Exercises() {
+    const [exercises, setExercises] = useState([]);
 
-    const exercises = [
+    useEffect(() => {
+        const fetchExercises = async () => {
+            try {
+                const response = await api.get("/api/exercises");
+                setExercises(response.data);
+            } catch (error) {
+                setExercises([]);
+            }
+        };
 
-        {
-            id: 1,
-            title: "🧘 Respiration profonde",
-            description: "Respirez lentement pendant 5 minutes afin de diminuer votre niveau de stress."
-        },
-
-        {
-            id: 2,
-            title: "🚶 Marche",
-            description: "Marchez pendant 15 à 30 minutes pour vous détendre."
-        },
-
-        {
-            id: 3,
-            title: "🎵 Musique relaxante",
-            description: "Écoutez une musique douce afin de réduire le stress."
-        },
-
-        {
-            id: 4,
-            title: "🧠 Méditation",
-            description: "Prenez quelques minutes pour méditer et vous concentrer sur votre respiration."
-        }
-
-    ];
+        fetchExercises();
+    }, []);
 
     return (
-
         <div>
-
             <Navbar />
 
             <div className="exercise-container">
-
                 <h1>Exercices Anti-Stress</h1>
 
-                {
+                {exercises.length === 0 && <p>Aucun exercice disponible.</p>}
 
-                    exercises.map((exercise) => (
-
-                        <ExerciseCard
-
-                            key={exercise.id}
-
-                            title={exercise.title}
-
-                            description={exercise.description}
-
-                        />
-
-                    ))
-
-                }
-
+                {exercises.map((exercise) => (
+                    <ExerciseCard
+                        key={exercise._id}
+                        title={exercise.title}
+                        description={exercise.description}
+                        category={exercise.category}
+                        duration={exercise.duration}
+                    />
+                ))}
             </div>
-
         </div>
-
     );
-
 }
 
 export default Exercises;
